@@ -2,11 +2,19 @@
 
 .ProductItem {
 	width: 240px;
+	min-height: 300px;
+	cursor: pointer;
+	border-radius: 20px;
+	overflow: hidden;
+	border: 1px solid var(--very-light-pink);
+	transition: .2s;
+}
+.ProductItem:hover {
+	box-shadow: 0 2px 5px var(--very-light-pink);
 }
 .ProductItem img {
 	width: 240px;
 	height: 240px;
-	border-radius: 20px;
 	object-fit: cover;
 }
 .product-info {
@@ -14,6 +22,7 @@
 	justify-content: space-between;
 	align-items: center;
 	margin-top: 12px;
+	padding: 0 12px 12px;
 }
 .product-info figure {
 	margin: 0;

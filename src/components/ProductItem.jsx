@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import AppContext from '@context/AppContext';
 import addToCartImg from '@icons/bt_add_to_cart.svg';
+import logo from '@logos/favicon_yard_sale.svg';
 import '@styles/ProductItem.scss';
 
 function ProductItem({ product }) {
@@ -12,7 +13,11 @@ function ProductItem({ product }) {
 
   return (
     <div className="ProductItem">
-      <img src={product.images[1]} alt={product.title} className="product-img" />
+      <img
+        src={product.images[1] || logo}
+        alt={product.title}
+        className="product-img"
+      />
       <div className="product-info">
         <div>
           <p>${product.price}</p>
